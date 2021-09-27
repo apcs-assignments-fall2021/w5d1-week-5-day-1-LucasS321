@@ -6,6 +6,24 @@ public class MyMain {
     // to sort our code
     // This algorithm returns the sorted array
     public static int[] selectionSort(int[] arr) {
+        int pre = -9999;
+        int smallest = 0;
+        for (int i = 0; i< arr.length;i++) {
+            smallest = 99999;
+            int sm2 = -1;
+            for (int x = i; x < arr.length; x++) {
+                if (arr[x] < smallest) {
+                    if (arr[x] > pre) {
+                        smallest = arr[x];
+                        sm2 = x;
+                    }
+                }
+            }
+            int prearr = arr[i];
+            arr[i] = smallest;
+            arr[sm2] = prearr;
+            pre = smallest;
+        }
         // REPLACE THIS WITH YOUR CODE
         return arr;
     }
@@ -14,6 +32,9 @@ public class MyMain {
     // to sort our code
     // This algorithm returns the sorted array
     public static int[] insertionSort(int[] arr) {
+        for (int sero = 0; sero < arr.length; sero++) {
+
+        }
         // REPLACE THIS WITH YOUR CODE
         return arr;
     }
